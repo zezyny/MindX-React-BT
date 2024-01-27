@@ -1,0 +1,30 @@
+html,
+body {
+    padding: 0;
+    margin: 0 auto;
+    width: 320px;
+    background-color: #ccc;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.calContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.calDisplay {
+    background-color: #000;
+    color: #fff;
+    width: 320px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 0 20px;
+}
+
+button {
+    width: 80px;
+    height: 50px;
+}
