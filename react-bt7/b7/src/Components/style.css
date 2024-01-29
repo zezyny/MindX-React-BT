@@ -1,0 +1,56 @@
+* {
+    font-family: 'Comfortaa', sans-serif;
+}
+
+body {
+    background-color: aliceblue;
+}
+
+h1 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.listContainer {
+    width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(183, 221, 255);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 10px 0;
+}
+
+.taskRenderList {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: flex-start;
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 4px;
+}
+
+.nav-tabs {
+    justify-content: flex-start;
+}
+
+.tabList {
+    width: 100%;
+}
+
+.inputField {
+    display: flex;
+    width: 100%;
+}
