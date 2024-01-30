@@ -54,3 +54,14 @@ h1 {
     display: flex;
     width: 100%;
 }
+
+.change-background {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: flex-start;
+    background-color: rgb(197, 210, 255);
+    padding: 10px;
+    margin-bottom: 4px;
+}

@@ -3,15 +3,12 @@ import Tabs from 'react-bootstrap/Tabs';
 import { Checkbox } from 'antd';
 import { Button } from 'react-bootstrap';
 function TabList(props) {
-    const handleDel = () => {
-        console.log(task);
-    }
     const renderAllTask = () => {
         return props.item.map((it) => {
-            return <div key={it.id} className='taskRenderList'>
-                <Checkbox />
+            return <div key={it.id} className={!it.taskStat ? 'taskRenderList' : 'change-background'}>
+                <Checkbox onChange={() => { props.change(it.id) }} checked={it.taskStat} />
                 <p>{it.taskName}</p>
-                <Button variant="outline-danger" size="sm" onClick={handleDel}>Delete</Button>
+                <Button variant="outline-danger" size="sm" onClick={props.del} id={it.id}>Delete</Button>
             </div>
         })
     }
@@ -19,12 +16,11 @@ function TabList(props) {
         let all = props.item.filter((it) => {
             return it.taskStat == false
         })
-        console.log(all);
         return all.map((it) => {
             return <div key={it.id} className='taskRenderList'>
-                <Checkbox />
+                <Checkbox onChange={() => { props.change(it.id) }} checked={it.taskStat} />
                 <p>{it.taskName}</p>
-                <Button variant="outline-danger" size="sm">Delete</Button>
+                <Button variant="outline-danger" size="sm" onClick={props.del} id={it.id}>Delete</Button>
             </div>
         })
     }
@@ -32,12 +28,11 @@ function TabList(props) {
         let completed = props.item.filter((it) => {
             return it.taskStat == true
         })
-        console.log(completed);
         return completed.map((it) => {
-            return <div key={it.id} className='taskRenderList'>
-                <Checkbox />
+            return <div key={it.id} className='change-background'>
+                <Checkbox onChange={() => { props.change(it.id) }} checked={it.taskStat} />
                 <p>{it.taskName}</p>
-                <Button variant="outline-danger" size="sm">Delete</Button>
+                <Button variant="outline-danger" size="sm" onClick={props.del} id={it.id}>Delete</Button>
             </div>
         })
     }
