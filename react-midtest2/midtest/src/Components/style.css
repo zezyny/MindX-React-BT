@@ -1,0 +1,112 @@
+* {
+    font-family: "Poppins", sans-serif;
+    width: 1200px;
+    margin: auto;
+    background-color: #192026;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+.nav-container {
+    display: flex;
+    padding: 20px 0;
+}
+
+.nav-container input {
+    background-color: #374151;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    flex: 2;
+}
+
+.nav-container input::placeholder {
+    color: #868686;
+}
+
+.nav-container h1 {
+    flex: 2
+}
+
+.nav-container .nav-link {
+    flex: 5;
+}
+
+.nav-container a {
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.list-container {
+    display: flex;
+    max-width: 100%;
+    justify-content: space-between;
+}
+
+.movie-container {
+    display: flex;
+    flex-direction: column;
+    width: 13%;
+    height: 330px;
+    justify-content: flex-start;
+}
+
+.movie-container button {
+    height: 270px;
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    margin-top: 0;
+    position: relative;
+    background-size: cover;
+}
+
+.movie-container button span {
+    width: 100%;
+    padding: 15px 0 10px 0;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(99, 131, 159, 0.1) 10%, rgba(25, 32, 38, 1) 100%);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.movie-container .a {
+    text-align: center;
+    width: 100%;
+    background-color: transparent;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 0;
+    height: fit-content;
+    font-weight: 500;
+}
+
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    margin: 30px 0;
+    position: relative;
+    border-radius: 20px;
+}
+
+.carousel-container img {
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+.movie-detail {
+    position: absolute;
+    width: 70%;
+    bottom: 0;
+    padding: 50px;
+    background-color: transparent;
+}
+
+.movie-detail h2,
+p {
+    background-color: transparent;
+    width: 100%;
+}
