@@ -12,8 +12,12 @@ export default function NewRelease(props) {
         })
     }
     return (
-        <div className='list-container'>
-            {renderList()}
+        <div>
+            <h2>New release</h2>
+            <div className='list-container'>
+
+                {renderList()}
+            </div>
         </div>
     )
 }

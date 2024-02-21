@@ -12,6 +12,8 @@ export default function Carousel(props) {
     }
     return (
         <div>
+            <h2>Explore</h2>
+            <p>What are you gonna watch today?</p>
             {renderCarousel()}
         </div>
     )
