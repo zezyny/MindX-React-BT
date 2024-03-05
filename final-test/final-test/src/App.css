@@ -20,15 +20,21 @@ h1 {
   margin: 20px 0;
 }
 
-.task-list {
+.task-list,
+.task-completed {
   padding: 3px 0;
 }
 
-.task-list label {
+.task-completed span {
+  text-decoration: line-through;
+}
+
+.task-list label,
+.task-completed label {
   margin-right: 10px;
 }
 
-.completed-task {
+#completed-task {
   display: flex;
   justify-content: space-between;
   align-items: center;

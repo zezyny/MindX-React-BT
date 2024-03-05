@@ -6,9 +6,9 @@ import { DeleteOutlined } from '@ant-design/icons';
 export default function Tabslist(props) {
     const renderAllTask = () => {
         return props.item.map((i) => {
-            return <div key={i.id} className='task-list'>
+            return <div key={i.id} className={!i.complete ? 'task-list' : 'task-completed'} >
                 <Checkbox checked={i.complete} onChange={() => { props.change(i.id) }} /> <span>{i.taskName}</span>
-            </div>
+            </div >
         })
     }
 
@@ -28,7 +28,7 @@ export default function Tabslist(props) {
             return item.complete == true
         })
         return completed.map((i) => {
-            return <div key={i.id} className='task-list completed-task' >
+            return <div key={i.id} className={!i.complete ? 'task-list' : 'task-completed'} id='completed-task' >
                 <div><Checkbox checked={i.complete} onChange={() => { props.change(i.id) }} /> <span>{i.taskName}</span></div>
                 <Button type="text" id={i.id} onClick={() => { props.del(i.id) }}><DeleteOutlined /></Button>
             </div>
