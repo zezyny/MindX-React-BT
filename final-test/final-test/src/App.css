@@ -1,0 +1,41 @@
+* {
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  max-width: 500px;
+  margin: 0 auto !important;
+  box-sizing: border-box;
+  position: relative;
+}
+
+h1 {
+  text-align: center;
+  padding: 40px;
+}
+
+.input-fields {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.task-list {
+  padding: 3px 0;
+}
+
+.task-list label {
+  margin-right: 10px;
+}
+
+.completed-task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.del-all-btn {
+  position: absolute;
+  right: 0;
+  margin-top: 20px;
+}
