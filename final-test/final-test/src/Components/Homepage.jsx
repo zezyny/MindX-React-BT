@@ -1,12 +1,22 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Tabslist from './Tabs';
 export default function Homepage() {
+
     const [input, setInput] = useState("")
     const [task, setTask] = useState([])
-
+    useEffect(() => {
+        let storedTask = JSON.parse(localStorage.getItem('tasks'))
+        if (storedTask) {
+            let newTask = [...storedTask]
+            setTask(newTask)
+        }
+    }, [])
+    useEffect(() => {
+        localStorage.setItem('tasks', JSON.stringify(task))
+    }, [task])
     const handleChange = (e) => {
         setInput(e.target.value)
     }
